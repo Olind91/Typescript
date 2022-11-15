@@ -1,0 +1,95 @@
+.Navbar .container{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:0;
+        
+}
+
+ .homepage .Navbar{
+    background-color:var(--color-gray-1);
+}
+
+    .Navbar .Fixxo{
+        text-decoration: none;
+        font-family:var(--font-poppins);
+        font-size:36px;
+        color:var(--color-dark);
+        font-weight:bold;
+
+    }
+
+
+    /* Home, Categories m.m */
+
+    .Navbar .directory{
+        margin-left:5rem;
+    }
+
+    .Navbar .directory .Navigation{
+        position:relative;
+        text-decoration:none;
+        list-style:none;
+        display:inline-flex;
+        padding:1rem;
+        margin-top:1rem;
+        color:var(--color-dark);
+        font-weight:500;
+        
+    }
+
+    .Navbar .directory .Navigation::before{
+        content:'';
+        position:absolute;
+        bottom:-0.5px;
+        width:80%;
+        height:2px;
+        background:#333;
+        transform:scaleX(0);
+        transition:transform 0.5s ease-in-out;
+        transform-origin:right;
+    }
+
+    .Navbar .directory .Navigation:hover::before{
+        transform:scaleX(1);
+        transform-origin:left;
+        
+    }
+    .Navbar .directory .Navigation:hover{
+        color:var(--color-theme);
+    }
+
+    .Navbar .directory .active{
+        color:var(--color-theme);
+        text-decoration:none;
+    }
+    
+    /* Search, wishlist m.m */
+    
+
+    .Navbar .navlinks a{
+        position:relative;
+        text-decoration: none;
+        width:36px;
+        height:36px;
+        margin-left:20px;
+        border-radius:50%;
+        justify-content: center;
+        align-items:center;
+        display:inline-flex;
+        background-color:white;
+        color:var(--color-dark);
+        box-shadow: 0 0 6px 3px var(--color-shadow);
+        transition:0.2s ease-in-out;
+    }
+
+    .Navbar .navlinks a:hover{
+        background-color:var(--color-dark);
+        color:var(--color-white);
+    }
+
+    .Navbar .navlinks .active{
+        color:var(--color-theme);
+        text-decoration: none;
+
+    }

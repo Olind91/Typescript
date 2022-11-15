@@ -1,0 +1,67 @@
+.contact-form .contact{
+    font-weight:bold;
+    margin-bottom:1rem;
+   
+}
+
+.contact-form .inputs{
+    display:flex;
+    gap:1rem;
+    justify-content: space-between;
+    
+}
+
+.contact-form .inputBoxes{
+    width:100%;
+}
+
+.contact-form .inputBoxes input{
+    padding:1rem;
+    font-size:1rem;
+    width:100%;
+}
+
+
+/* Textarea */
+.contact-form #comments {
+    height:7rem;
+    width:100%;
+    margin-top:2rem;
+    padding-left:0.5rem;
+    resize: none;
+}
+
+.contact-form .theme-button{
+    margin-top:2rem;
+}
+
+
+/* Felmeddelanden färg + border */
+
+.validFailName input{
+    border:1px solid var(--color-theme)
+}
+
+
+.validFailEmail input{
+    border:1px solid var(--color-theme)
+}
+
+.validFailcomments textarea{
+    border:1px solid var(--color-theme)
+}
+
+.contact-form .errorMessage{
+    color:var(--color-theme);
+}
+
+
+
+.contact-form .container .alert{
+    height:100px;
+    text-align: center;
+    padding-top:30px;
+    font-size:25px;
+    font-weight:bold;
+}
+

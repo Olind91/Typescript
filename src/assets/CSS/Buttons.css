@@ -1,0 +1,52 @@
+.theme-button{
+    position:relative;
+    color:var(--color-white);
+    background-color:var(--color-theme);
+    text-decoration: none;
+    padding:15px 40px;
+    transition:0.2s ease-in-out;
+}
+.theme-button:hover{
+    background-color:var(--color-dark);
+    color:var(--color-theme);
+}
+
+.theme-button .btn-theme-left,
+.theme-button .btn-theme-right{
+    position:absolute;
+    height:20px;
+    width:20px;
+}
+
+.theme-button .btn-theme-left{
+    top:10px;
+    left:10px;
+    border-left:1px solid var(--color-white);
+    border-top:1px solid var(--color-white);
+}
+
+.theme-button .btn-theme-right{
+   bottom:10px;
+   right:10px;
+   border-right:1px solid var(--color-white);
+   border-bottom:1px solid var(--color-white);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

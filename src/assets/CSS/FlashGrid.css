@@ -1,0 +1,54 @@
+.flash-grid .container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    padding:0;
+    margin-bottom:5rem;
+}
+
+.flash-grid-box{
+    background: rgb(199,199,189);
+    background: linear-gradient(90deg, rgba(199,199,189,1) 0%, rgba(164,155,167,1) 35%, rgba(118,125,140,1) 100%);
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+
+.flash-grid-title{
+    font-size:45px;
+    font-weight:600;
+    color:var(--color-white);
+    margin-bottom:1.7rem;
+}
+
+/* Buttons */
+.flash-grid-box .theme-button{
+    background-color:var(--color-white);
+    color:var(--color-dark);
+}
+
+    .flash-grid-box .theme-button .btn-theme-left{
+        border-left:1px solid var(--color-dark);
+    border-top:1px solid var(--color-dark);
+    }
+
+    .flash-grid-box .theme-button .btn-theme-right{
+        border-right:1px solid var(--color-dark);
+    border-bottom:1px solid var(--color-dark);
+    }
+
+    .flash-grid-box .theme-button:hover{
+        background-color:var(--color-dark);
+        color:var(--color-theme);
+    }
+
+        .flash-grid-box .theme-button:hover .btn-theme-left{
+            border-top:1px solid var(--color-white);
+            border-left:1px solid var(--color-white);
+        }
+
+        .flash-grid-box .theme-button:hover .btn-theme-right{
+            border-right:1px solid var(--color-white);
+            border-bottom:1px solid var(--color-white);
+        }

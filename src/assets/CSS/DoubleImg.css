@@ -1,0 +1,108 @@
+.Double-image{
+    margin-bottom:5rem;
+}
+
+
+.Double-image .container img{
+   width:100%;
+}
+
+.Double-image .Images{
+    object-fit: cover;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:2rem; 
+}
+
+/* Vänster bild */
+
+.Double-image .DoubleLeft{
+    position:relative;
+    
+}
+
+    .Double-image .DoubleLeft h1{
+        position:absolute;
+        top:50px;
+        right:-30px;
+        font-weight:bold;
+        color:white;
+        width:50%;
+        font-size:36px;
+    }
+
+    .Double-image .DoubleLeft a{
+        position:absolute;
+        bottom:100px;
+        right:120px;
+    }
+
+
+/* Höger bild */
+
+.Double-image .DoubleRight{
+    position:relative;
+    
+}
+
+    .Double-image .DoubleRight h1{
+        position:absolute;
+        top:50px;
+        left:50px;
+        font-weight:bold;
+        color:black;
+        width:50%;
+        font-size:36px;
+    }
+
+    .Double-image .DoubleRight a{
+        position:absolute;
+        bottom:100px;
+        left:50px;
+        
+    }
+
+
+/* Pamela Reif button */
+.Double-image .DoubleLeft .theme-button{
+    background-color:var(--color-dark);
+    color:var(--color-white);
+}
+
+.Double-image .DoubleLeft .theme-button .btn-theme-left{
+    border-left:1px solid var(--color-white);
+   border-top:1px solid var(--color-white);
+}
+
+.Double-image .DoubleLeft .theme-button .btn-theme-right{
+    border-right:1px solid var(--color-white);
+   border-bottom:1px solid var(--color-white);
+}
+
+.Double-image .DoubleLeft .theme-button:hover{
+    color:var(--color-theme);
+}
+
+
+
+/* Lets be conscious button */
+.Double-image .DoubleRight .theme-button{
+    background-color:var(--color-white);
+    color:var(--color-dark);
+}
+
+.Double-image .DoubleRight .theme-button .btn-theme-left{
+    border-left:1px solid var(--color-dark);
+   border-top:1px solid var(--color-dark);
+}
+
+.Double-image .DoubleRight .theme-button .btn-theme-right{
+    border-right:1px solid var(--color-dark);
+    border-bottom:1px solid var(--color-dark);
+}
+
+.Double-image .DoubleRight .theme-button:hover{
+    
+    color:var(--color-theme);
+}

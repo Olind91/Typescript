@@ -1,0 +1,19 @@
+.foot{
+    border:1px solid var(--color-gray-2);
+    background: var(--color-gray-1);
+    margin-top:3rem;
+}
+
+.foot .container{
+    text-align: center;
+    
+}
+    
+.foot .footer-links{
+    margin-top:2rem;
+    margin-bottom:1rem;
+}
+.foot .footer-links a{
+    margin:0.5rem;
+    color:var(--color-dark);
+}

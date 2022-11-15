@@ -1,0 +1,139 @@
+.detailFlex{
+    margin-top:5rem;
+    margin-bottom:5rem;
+}
+
+.detailFlex .container{
+    display:flex;
+    justify-content: space-evenly;
+    
+}
+
+/* Vänstra sidan */
+.detailFlex .gridBoxLarge{
+    background-color: rgb(199, 196, 196);
+    height:360px;
+    width:500px;
+}
+
+.detailFlex .smallBoxes{
+    display:flex;
+    justify-content: space-between;
+    margin-top:2rem;
+}
+
+.detailFlex .smallBoxes .gridBoxSmall{
+    background-color: rgb(199, 196, 196);
+    height:130px;
+    width:150px;
+}
+
+.detailFlex .detailGrid{
+    display:grid;
+    grid-template-columns: 2;
+    grid-template-rows: 3;
+    text-align: center;
+}
+
+/* Högra sidan */
+.detailFlex .detailsInfo{
+    width:50%;
+}
+
+.detailFlex .detailsInfo .detailsRight{
+    height:100%;
+    width:100%;
+}
+
+.detailFlex .detailsInfo .detailsRight .title{
+    font-weight:bold;
+    font-size:20px;
+}
+
+
+.detailFlex .detailsInfo .detailsRight .spanTitle{
+    font-weight:700;
+}
+
+
+.detailFlex .detailsInfo .detailsRight .sizes{
+    margin-left:1.5rem;
+    border:1px solid black;
+    padding:0.6rem 1rem;
+}
+
+.detailFlex .detailsInfo .detailsRight .optionDrop{
+    margin-left:1rem;
+    border:1px solid black;
+    padding:0.6rem 4rem 0.6rem 0.6rem;;
+}
+
+.detailFlex .detailsInfo .detailsRight .removeAdd{
+    margin-left:2rem;
+    font-weight:bold;
+}
+
+.detailFlex .detailsInfo .detailsRight .remove{
+    border:1px solid black;
+    padding:0.8rem;
+    
+}
+
+.detailFlex .detailsInfo .detailsRight .number{
+    border:1px solid black;
+    padding:0.8rem 1.5rem;
+}
+
+.detailFlex .detailsInfo .detailsRight .add{
+    border:1px solid black;
+    padding:0.8rem;
+}
+
+.detailFlex .detailsInfo .detailsRight button{
+    margin-left:2rem;
+    padding-top:0.6rem;
+    padding-bottom:0.6rem;
+}
+
+.detailFlex .detailsInfo .detailsRight .shareLinks:hover{
+    color:rgb(150, 83, 83);
+}
+
+.detailFlex .detailsInfo .detailsRight .share a{
+    text-decoration: none;
+    width:36px;
+    height:36px;
+    margin-left:20px;
+    border-radius:50%;
+    justify-content: center;
+    align-items:center;
+    display:inline-flex;
+    background-color:rgb(243, 243, 243);
+    color:var(--color-dark);
+    box-shadow: 0 0 6px 3px var(--color-shadow);
+    transition:0.2s ease-in-out;
+}
+
+.detailFlex .detailsInfo .detailsRight .share a:hover{
+    background-color:rgb(223, 222, 222);
+}
+
+
+
+/* Stökig CSS, var inte helt säker på hur jag skulle få till detta på ett bra sätt */
+
+.detailFlex .detailsInfo .detailsRight .description{
+    margin-top:3.5rem;
+}
+.detailFlex .detailsInfo .detailsRight .size{
+    margin-top:3.5rem;
+}
+.detailFlex .detailsInfo .detailsRight .color{
+    margin-top:3.5rem;
+}
+.detailFlex .detailsInfo .detailsRight .qty{
+    margin-top:3.5rem;
+}
+.detailFlex .detailsInfo .detailsRight .share{
+    margin-top:3.5rem;
+}

@@ -1,0 +1,35 @@
+.Showcase{
+    background-color:var(--color-gray-1);
+}
+
+    .Showcase .img-left{
+        margin-left:-10px;
+        height:700px;
+    }
+
+    .Showcase .img-right{
+        margin-right:-15px;
+        height:700px;
+    }
+
+    .Showcase .container{
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+    }
+
+    .Showcase .showcase-text{
+        font-style:var(--font-poppins);
+        text-align:center;
+    }
+
+    .Showcase .showcase-text h1{
+        font-size:65px;
+        font-weight:800;
+    }
+
+    .Showcase .showcase-text p{
+        padding-top:20px;
+        padding-bottom:30px;
+    }
+

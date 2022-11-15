@@ -1,0 +1,15 @@
+.featured{
+    margin-top:4rem;
+    margin-bottom:4rem;
+}
+
+    .featured .container{
+        max-width:1110px;
+        
+    }
+
+    .featured .f-title{
+        text-align: center;
+        margin-bottom:3rem;
+        font-weight:bold;
+    }

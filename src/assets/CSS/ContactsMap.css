@@ -1,0 +1,11 @@
+.mappu .container{
+    padding-bottom:550px;
+}
+
+
+iframe{
+    position:absolute;
+    right:0;
+    width:100%;
+    height:50%;
+}
