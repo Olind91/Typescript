@@ -12,7 +12,7 @@ import { FeaturedProductsContext, GridProductsContext } from '../contexts/contex
 
 
 
-const HomeView: React.FC = () => {
+const HomeView = (_title:any, ProductModel:any) => {
 
   const products = useContext(FeaturedProductsContext)
   const gridProducts = useContext(GridProductsContext)
@@ -22,10 +22,10 @@ return (
     <div className="homepage">
     <Navbar />
      <Showcase />
-     <Featured  title="Featured Products" items={products}/>
+     <Featured {...ProductModel.title} items={products}/>
      <DoubleImg />
-     <FlashgridLeft items={gridProducts}/>
-     <FlashgridRight items={gridProducts}/>
+     <FlashgridLeft {...ProductModel.title} items={gridProducts}/>
+     <FlashgridRight {...ProductModel.title} items={gridProducts}/>
      <Support />
      <Footer />
      </div>
