@@ -22,7 +22,7 @@ return (
     <div className="homepage">
     <Navbar />
      <Showcase />
-     <Featured title="Featured Products" items={products}/>
+     <Featured  title="Featured Products" items={products}/>
      <DoubleImg />
      <FlashgridLeft items={gridProducts}/>
      <FlashgridRight items={gridProducts}/>

@@ -20,9 +20,9 @@ import ProductDetailsView from './views/ProductDetailsView';
 
 const App: React.FC = () => {
   
-    const [products, setProducts] = useState([])
-    const [featured, setFeatured] = useState([])
-    const [gridProducts, setGridProducts] = useState([])
+    const [products, setProducts] = useState([] as string[]);
+    const [featured, setFeatured] = useState([] as string[]);
+    const [gridProducts, setGridProducts] = useState([] as string []);
   
     useEffect(() => {
       const fetchAllData = async () => {
@@ -47,10 +47,10 @@ const App: React.FC = () => {
   
     }, [setProducts, setFeatured, setGridProducts])
   
-  
+    
+    
   
   return (
-    
     <BrowserRouter>
       <ProductsContext.Provider value={products}>
         <FeaturedProductsContext.Provider value={featured}>

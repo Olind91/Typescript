@@ -4,7 +4,7 @@ import Navbar from '../components/UniversalItems/Navbar';
 import { ProductsContext } from '../contexts/context';
 import Header from '../Sections/Header';
 
-const ProductsView: React.FC = () => {
+const ProductsView: React.FC = (_title, ProductModel) => {
 
   const products = useContext(ProductsContext)
 
@@ -15,8 +15,8 @@ const ProductsView: React.FC = () => {
   return (
     <>
     <Navbar />
-    <Header title="Products"/>
-    <Featured title="All Products" items={products}/>
+    <Header {...ProductModel.title}/>
+    <Featured {...ProductModel.title} items={products}/>
     </>
   )
 }

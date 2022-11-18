@@ -3,7 +3,7 @@ import FlashSaleButton from '../components/UniversalItems/FlashSaleButton'
 import ProductCard from '../components/UniversalItems/ProductCard'
 
 
-const FlashgridLeft: React.FC = ({items = []}) => {
+const FlashgridLeft: React.FC = ({items = []}:any) => {
 
   
 
@@ -19,7 +19,7 @@ const FlashgridLeft: React.FC = ({items = []}) => {
         
         <div className="row row-cols-1 row-cols-md-2 g4">
           {
-            items.map(product => <ProductCard key={product.articleNumber} item={product} />)
+            items.map((product:any) => <ProductCard key={product.articleNumber} item={product} />)
           }
         </div>
       </div>
