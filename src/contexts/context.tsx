@@ -4,7 +4,9 @@ import { useContext, createContext, ReactNode } from 'react'
 
 export const ProductsContext = createContext({})
 
-type ProductsContextProviderProps = {
+
+
+/*type ProductsContextProviderProps = {
     children:ReactNode
 }
 
@@ -20,13 +22,13 @@ export function ProductsProvider({ children }:
         </ProductsContext.Provider>
     )
     
-}
+}*/
 
 /////////////////////////////////////////////////////////////
 
 export const FeaturedProductsContext = createContext({})
 
-type FeaturedProductsContextProviderProps = {
+/*type FeaturedProductsContextProviderProps = {
     children:ReactNode
 }
 
@@ -42,13 +44,13 @@ export function FeaturedProductsProvider({ children }:
         </FeaturedProductsContext.Provider>
     )
     
-}
+}*/
 
 //////////////////////////////////////////////////////////////////
 
 export const GridProductsContext = createContext({})
 
-type GridProductsContextProviderProps = {
+/*type GridProductsContextProviderProps = {
     children:ReactNode
 }
 
@@ -64,6 +66,6 @@ export function GridProductsProvider({ children }:
         </GridProductsContext.Provider>
     )
     
-}
+}*/
 
 //ReactNode = type property you give "children" in React

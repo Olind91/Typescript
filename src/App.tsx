@@ -20,9 +20,9 @@ import ProductDetailsView from './views/ProductDetailsView';
 
 const App: React.FC = () => {
   
-    const [products, setProducts] = useState([] as string[]);
-    const [featured, setFeatured] = useState([] as string[]);
-    const [gridProducts, setGridProducts] = useState([] as string []);
+    const [products, setProducts] = useState([]);
+    const [featured, setFeatured] = useState([]);
+    const [gridProducts, setGridProducts] = useState([]);
   
     useEffect(() => {
       const fetchAllData = async () => {
@@ -39,7 +39,7 @@ const App: React.FC = () => {
       fetchFeaturedData()
 
       const fetchGridData = async () => {
-        const result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
+        const result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4') 
         setGridProducts(await result.json())
       }
       fetchGridData()

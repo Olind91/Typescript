@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const ProductDetail: React.FC = ({}) => {
+const ProductDetail: React.FC = () => {
 
 
 // Inte hunnit klart med detta

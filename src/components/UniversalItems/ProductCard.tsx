@@ -1,9 +1,18 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { ProductItem } from '../../Models/ProductModel'
 
-//Tror inte man ska göra såhär, ska väl undvika "any" så gott det går, men sitter fast
-const ProductCard = ({item}:any) => {
+
+
+interface ProductType{
+    item: ProductItem
+}
+
+const ProductCard: React.FC<ProductType> = ({item}) => {
     
+
+
+
   return (
     <div className="col">
         <div className="card">
