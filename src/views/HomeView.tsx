@@ -12,6 +12,7 @@ import { FeaturedProductsContext, GridProductsContext } from '../contexts/contex
 
 
 
+
 const HomeView: React.FC = () => {
 
   const featured = useContext(FeaturedProductsContext)

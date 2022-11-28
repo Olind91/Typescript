@@ -4,11 +4,11 @@ import ProductCard from '../components/UniversalItems/ProductCard'
 import { ProductItem } from './../Models/ProductModel'
 
 
-interface ProductType{
+interface ProductGridRType{
   items: ProductItem[]
 }
 
-const FlashgridRight: React.FC<ProductType> = ({items = []}) => {
+const FlashgridRight: React.FC<ProductGridRType> = ({items = []}) => {
 
   
 

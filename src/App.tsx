@@ -18,8 +18,12 @@ import ProductDetailsView from './views/ProductDetailsView';
 
 
 
+
 const App: React.FC = () => {
+    
   
+
+
     const [products, setProducts] = useState([]);
     const [featured, setFeatured] = useState([]);
     const [gridProducts, setGridProducts] = useState([]);

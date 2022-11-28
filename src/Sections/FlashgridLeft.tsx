@@ -5,11 +5,11 @@ import { ProductItem } from './../Models/ProductModel'
 
 
 
-interface ProductType{
+interface ProductGridLType{
   items: ProductItem[]
 }
 
-const FlashgridLeft: React.FC<ProductType> = ({items = []}) => {
+const FlashgridLeft: React.FC<ProductGridLType> = ({items = []}) => {
 
   
 

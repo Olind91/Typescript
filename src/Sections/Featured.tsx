@@ -3,12 +3,12 @@ import ProductCard from '../components/UniversalItems/ProductCard';
 import { ProductItem } from './../Models/ProductModel'
 
 
-interface ProductType{
-  title:string
+interface ProductFeaturedType{
+  title?:string
   items: ProductItem[]
 }
 
-const Featured: React.FC<ProductType> = ({title, items = []}) => {
+const Featured: React.FC<ProductFeaturedType> = ({title, items = []}) => {
 
  
 

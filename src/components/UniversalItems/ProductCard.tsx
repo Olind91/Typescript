@@ -4,11 +4,11 @@ import { ProductItem } from '../../Models/ProductModel'
 
 
 
-interface ProductType{
+interface ProductCardType{
     item: ProductItem
 }
 
-const ProductCard: React.FC<ProductType> = ({item}) => {
+const ProductCard: React.FC<ProductCardType> = ({item}) => {
     
 
 

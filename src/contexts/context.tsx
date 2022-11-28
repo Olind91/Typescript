@@ -2,7 +2,8 @@ import { useContext, createContext, ReactNode } from 'react'
 
 
 
-export const ProductsContext = createContext({})
+
+export const ProductsContext = createContext([]);
 
 
 
@@ -26,7 +27,7 @@ export function ProductsProvider({ children }:
 
 /////////////////////////////////////////////////////////////
 
-export const FeaturedProductsContext = createContext({})
+export const FeaturedProductsContext = createContext([])
 
 /*type FeaturedProductsContextProviderProps = {
     children:ReactNode
@@ -48,7 +49,7 @@ export function FeaturedProductsProvider({ children }:
 
 //////////////////////////////////////////////////////////////////
 
-export const GridProductsContext = createContext({})
+export const GridProductsContext = createContext([])
 
 /*type GridProductsContextProviderProps = {
     children:ReactNode
