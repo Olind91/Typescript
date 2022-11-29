@@ -1,17 +1,10 @@
-
-
 import React, {useState} from 'react'
-
-
-
 
 interface ErrorType{
     comments: string
     email: string
     name: string
-    
 }
-
 
 
 const ContactForm: React.FC = () => {
@@ -26,27 +19,24 @@ const ContactForm: React.FC = () => {
 
     
 
-   
+    const validateName = (value: {name: string;}) => {
+
+    const regex_name = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u
+
+        if(!value.name)
+        return"You must enter a name"
 
 
-        const validateName = (value: {name: string;}) => {
+        else if(value.name.length < 2)
+        return"Your Name must be atleast 2 characters long"
     
-        const regex_name = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u
 
-            if(!value.name)
-            return"You must enter a name"
+        else if(!regex_name.test(value.name))
+        return "Please use letters and ',.'-' these characters only "
+
     
-
-            else if(value.name.length < 2)
-            return"Your Name must be atleast 2 characters long"
-        
-
-            else if(!regex_name.test(value.name))
-            return "Please use letters and ',.'-' these characters only "
-
-        
-            else
-            return ''
+        else
+        return ''
     }
 
     const validateEmail = (value: {email: string;}) => {
@@ -60,9 +50,7 @@ const ContactForm: React.FC = () => {
             return "You must enter a valid e-mail address (eg. detvarsvårtmedvalidering@snällahjälpmig.com)"
 
         else
-            return ''
-        
-        
+        return ''
     }
 
     const validatecomments = (value: { comments: string }) => {
@@ -75,7 +63,7 @@ const ContactForm: React.FC = () => {
         return "Your comments must be atleast five characters long"
 
         else     
-            return ''
+        return ''
     }
     
    
@@ -158,58 +146,57 @@ const ContactForm: React.FC = () => {
     const handleSubmit= (e: { preventDefault: () => void }) => {
         e.preventDefault()
         handleValidationData(contactForm)
+    }
+
+
+
+
+    return (
+
+    <section className="contact-form">
+        <div className="container">
         
-        }
+        {
+            canSubmit ?
 
+        (<div className="alert alert-success"  role="alert" >Thank you for your comments!</div>)
 
+        :
+        (      
+                
+        <>
+        
+        <div><p className="contact">Come in Contact with Us</p></div>
 
-
-        return (
-
-        <section className="contact-form">
-            <div className="container">
-            
-            {
-                canSubmit ?
-
-            (<div className="alert alert-success"  role="alert" >Thank you for your comments!</div>)
-
-            :
-            (      
+            <form onSubmit={handleSubmit} noValidate>
+                <div className="inputs">
                     
-            <>
-            
-            <div><p className="contact">Come in Contact with Us</p></div>
-    
-                <form onSubmit={handleSubmit} noValidate>
-                    <div className="inputs">
-                        
-                        <div className="inputBoxes">
-                            <div className={inputName}>
-                                <input id="name" type="text" placeholder="Your name" value={contactForm.name} onChange={handleChange} onKeyUp={handleKeyUpName}></input>
-                                <div className="errorMessage">{formErrors.name}</div>
-                            </div>
-                        </div>
-
-                        <div className="inputBoxes">
-                            <div className={inputEmail}>
-                                <input id="email" type="email" placeholder="Your mail" value={contactForm.email} onChange={handleChange} onKeyUp={handleKeyUpEmail}></input>
-                                <div className="errorMessage">{formErrors.email}</div>
-                            </div>
+                    <div className="inputBoxes">
+                        <div className={inputName}>
+                            <input id="name" type="text" placeholder="Your name" value={contactForm.name} onChange={handleChange} onKeyUp={handleKeyUpName}></input>
+                            <div className="errorMessage">{formErrors.name}</div>
                         </div>
                     </div>
-        
-                        <div className={inputcomments}>
-                            <textarea id="comments" placeholder="Comments" value={contactForm.comments} onChange={handleChange} onKeyUp={handleKeyUpcomments}></textarea>
-                            <div className="errorMessage">{formErrors.comments}</div>
+
+                    <div className="inputBoxes">
+                        <div className={inputEmail}>
+                            <input id="email" type="email" placeholder="Your mail" value={contactForm.email} onChange={handleChange} onKeyUp={handleKeyUpEmail}></input>
+                            <div className="errorMessage">{formErrors.email}</div>
                         </div>
+                    </div>
+                </div>
     
-                    <button type="submit" className="theme-button"  >Post comments</button>
-                </form>
-                </>
-            
-            
-            )
+                    <div className={inputcomments}>
+                        <textarea id="comments" placeholder="Comments" value={contactForm.comments} onChange={handleChange} onKeyUp={handleKeyUpcomments}></textarea>
+                        <div className="errorMessage">{formErrors.comments}</div>
+                    </div>
+
+                <button type="submit" className="theme-button"  >Post comments</button>
+            </form>
+            </>
+        
+        
+        )
 
         }
             </div>

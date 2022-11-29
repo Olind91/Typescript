@@ -23,7 +23,7 @@ const ProductCard: React.FC<ProductCardType> = ({item}) => {
                     <button><i className="fa-light fa-heart"></i></button>
                     <button><i className="fa-light fa-bag-shopping"></i></button>
                 </div>
-                <NavLink to={`/products/${item.name.toLowerCase().replace(/ /gi, "-")}`} end className="theme-button">
+                <NavLink to={`/products/${item.articleNumber}`} end className="theme-button">
                     <span className="btn-theme-left"></span>
                     <span className="btn-theme-right"></span>
                     QUICK VIEW

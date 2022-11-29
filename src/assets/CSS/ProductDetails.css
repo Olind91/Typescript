@@ -14,6 +14,18 @@
     background-color: rgb(199, 196, 196);
     height:360px;
     width:500px;
+    
+}
+
+.detailFlex img{
+    width:100%;
+    height:100%;
+   
+    
+}
+.detailFlex img:hover{
+    opacity: 70%;
+   
 }
 
 .detailFlex .smallBoxes{

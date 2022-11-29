@@ -1,35 +1,40 @@
 import React from 'react'
+import { ProductItem } from '../Models/ProductModel'
+
+interface ProdDetail{
+  item:ProductItem
+}
+
+const ProductDetail: React.FC<ProdDetail> = ({item}) => {
 
 
-const ProductDetail: React.FC = () => {
 
-
-// Inte hunnit klart med detta
 
   return (
     <section className="detailFlex">
       <div className="container">
         <div className="detailGrid">
-          <div className="gridBoxLarge"></div>
+          <div className="gridBoxLarge">
+            <img src ={item.imageName}></img>
+          </div>
             <div className="smallBoxes">
-              <div className="gridBoxSmall">Röd</div>
-              <div className="gridBoxSmall">Blå</div>
-              <div className="gridBoxSmall">Grön</div>
+              <div className="gridBoxSmall"><img src ={item.imageName}></img></div>
+              <div className="gridBoxSmall"><img src ={item.imageName}></img></div>
+              <div className="gridBoxSmall"><img src ={item.imageName}></img></div>
             </div>
         </div>
       
         <div className="detailsInfo">
           <div className="detailsRight">
-            <div className="title">Title m.m här</div>
-            <div className="description">Discovered had get considered projection who favourable. Necessary up knowledge it tolerably.
-             Unwilling departure education is be dashwoods or an. Use off agreeable law unwilling sir deficient curiosity instantly</div>
+            <div className="title">{item.name} - ${item.price}</div>
+            <div className="description">{item.description} blablabla bla </div>
             
             <div className="size">
               <span className="spanTitle">Size:</span>
               <span className="sizes">S</span>
               <span className="sizes">M</span>
               <span className="sizes">L</span>
-              <span className="sizes">X</span>
+              <span className="sizes">XL</span>
             </div>
             
             <div className="color">

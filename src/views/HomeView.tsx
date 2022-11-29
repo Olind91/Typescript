@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../components/UniversalItems/Navbar';
 import Showcase from '../Sections/Showcase';
 import Support from '../Sections/Support';
@@ -7,7 +7,7 @@ import FlashgridLeft from '../Sections/FlashgridLeft';
 import FlashgridRight from '../Sections/FlashgridRight';
 import Featured from '../Sections/Featured';
 import DoubleImg from '../Sections/DoubleImg';
-import { FeaturedProductsContext, GridProductsContext } from '../contexts/context';
+import { ProductContextType, useProductContext } from '../contexts/ProductContext';
 
 
 
@@ -15,8 +15,16 @@ import { FeaturedProductsContext, GridProductsContext } from '../contexts/contex
 
 const HomeView: React.FC = () => {
 
-  const featured = useContext(FeaturedProductsContext)
-  const gridProducts = useContext(GridProductsContext)
+  const {featured, flashSale, getFeatured, getFlashSale} = useProductContext() as ProductContextType
+  
+  useEffect (() => {
+    getFeatured(8)
+    
+  },[])
+  useEffect (() => {
+    getFlashSale(4)
+    
+  },[])
 
 return (
     <>
@@ -25,8 +33,8 @@ return (
      <Showcase />
      <Featured title="Featured Products" items={featured}/>  
      <DoubleImg />
-     <FlashgridLeft items={gridProducts}/>
-     <FlashgridRight items={gridProducts}/>
+     <FlashgridLeft items={flashSale}/>
+     <FlashgridRight items={flashSale}/>
      <Support />
      <Footer />
      </div>

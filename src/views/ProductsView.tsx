@@ -1,18 +1,24 @@
-import React, { useContext } from 'react'
+import React, { useEffect } from 'react'
 import Featured from '../Sections/Featured';
 import Navbar from '../components/UniversalItems/Navbar';
-import { ProductsContext } from '../contexts/context';
+import { ProductContextType, useProductContext } from '../contexts/ProductContext';
 import Header from '../Sections/Header';
+
+
+
 
 const ProductsView: React.FC = () => {
 
-  const products = useContext(ProductsContext)
+  const {all, getAll} = useProductContext() as ProductContextType
+  useEffect (() => {
+    getAll()
+  },[])
 
   return (
     <>
     <Navbar />
     <Header title="All Products"/>
-    <Featured items={products}/>
+    <Featured title="All Products" items={all}/>
     </>
   )
 }
