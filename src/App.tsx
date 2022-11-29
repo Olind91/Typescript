@@ -11,6 +11,7 @@ import CompareView from './views/CompareView';
 import WishlistView from './views/WishlistView';
 import Shoppingcart from './views/ShoppingCartView';
 import ProductDetailsView from './views/ProductDetailsView';
+import ContactsView from './views/ContactsView';
 
 
 
@@ -64,7 +65,7 @@ const App: React.FC = () => {
           <Route path="/categories" element={<CategoriesView />} />
           <Route path="/products" element={<ProductsView />} />
           <Route path="/products/:articleNumber" element={<ProductDetailsView />} />
-          
+          <Route path="/contacts" element={<ContactsView />} />
           <Route path="/search" element={<SearchView />} />
           <Route path="/compare" element={<CompareView />} />
           <Route path="/wishlist" element={<WishlistView />} />
