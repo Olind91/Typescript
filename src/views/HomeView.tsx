@@ -15,14 +15,18 @@ import { ProductContextType, useProductContext } from '../contexts/ProductContex
 
 const HomeView: React.FC = () => {
 
-  const {featured, flashSale, getFeatured, getFlashSale} = useProductContext() as ProductContextType
+  const {featured, flashSaleLeft, flashSaleRight, getFeatured, getFlashSaleRight, getFlashSaleLeft} = useProductContext() as ProductContextType
   
   useEffect (() => {
     getFeatured(8)
     
   },[])
   useEffect (() => {
-    getFlashSale(4)
+    getFlashSaleRight(4)
+    
+  },[])
+  useEffect (() => {
+    getFlashSaleLeft(4)
     
   },[])
 
@@ -33,8 +37,8 @@ return (
      <Showcase />
      <Featured title="Featured Products" items={featured}/>  
      <DoubleImg />
-     <FlashgridLeft items={flashSale}/>
-     <FlashgridRight items={flashSale}/>
+     <FlashgridLeft items={flashSaleLeft}/>
+     <FlashgridRight items={flashSaleRight}/>
      <Support />
      <Footer />
      </div>
