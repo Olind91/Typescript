@@ -1,8 +1,11 @@
 import React from 'react'
+import PageNotFound from '../assets/Images/PageNotFound.png'
+import Navbar from '../components/UniversalItems/Navbar'
 
 const NotFoundView: React.FC = () => {
   return (
-    <div>404 Page Not Found</div>
+    
+    <img src={PageNotFound}></img>
   )
 }
 
